@@ -1,2 +1,2 @@
 # portfolio-html-css
- My own web portfolio using just Html and CSS
+ My own web portfolio using just Html CSS and JS
