@@ -47,9 +47,9 @@ span {
     font-size: 3.5vw;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 10ch;
+    width: 19ch;
 
-    animation: typing 2s steps(10), blink .5s infinite step-end alternate;
+    animation: typing 4s steps(19), blink .5s infinite step-end alternate;
     overflow: hidden;
 }
 
