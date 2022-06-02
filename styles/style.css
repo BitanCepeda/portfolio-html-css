@@ -39,7 +39,7 @@ body {
     border-radius: 50%;
 }
 
-span {
+.typewriter {
     display: block;
     font-family: monospace;
     font-weight: 700;
@@ -174,4 +174,43 @@ header a:hover {
     background-color: #93dfec;
     color: #eee;
     margin-left: -3px;
+}
+
+
+/* progress bar style */
+.progress-bar__container {
+    margin-top: 3vh;
+    width: 80vw;
+    height: 1.5rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    will-change: transform;
+    box-shadow: 0 0 5px white;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.progress-bar__text {
+    display: none;
+    font-family: monospace;
+    font-weight: 400;
+    color: black;
+    font-size: 1.5vw;
 }
