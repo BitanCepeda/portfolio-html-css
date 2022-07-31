@@ -13,16 +13,28 @@ body {
   background-color: black;
 }
 
+.slides {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* background-color: yellow; */
-}
-
-.photo-container {
-  /* background-color: blue; */
 }
 
 .label-loading {
@@ -176,9 +188,34 @@ header a:hover {
   color: white;
 }
 
-.progress-bar__text {
+.start {
+  background-color: transparent;
+  border: none;
+  animation: breathe 3.5s infinite forwards;
+}
+
+.start .progress-bar__text {
   display: none;
   font-weight: 400;
   color: black;
-  font-size: 1.8vw;
+  font-size: 1.5rem;
+}
+
+.start .progress-bar__text:hover {
+  cursor: pointer;
+  color: rgba(190, 236, 239, 0.943);
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }

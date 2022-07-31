@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brayan Cepeda Portfolio</title>
-
+    <link rel="icon" href="resources/img/favicon.ico">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <section class="container">
+    <section class="container" id="container">
         <div class="main">
             <div class="photo-container">
                 <figure>
@@ -21,11 +23,23 @@
             </div>
             <div class="progress-bar__container">
                 <div class="progress-bar">
-                  <span class="progress-bar__text">Completed 100%</span>
+                    <button class="start" id="startBtn"><span class="progress-bar__text">GO!</span></button>
                 </div>
+            </div>
+    </section>
+
+    <section class="slides" id="slides">
+        <div class="slide">
+            <h1 class="slide__title">Brayan Cepeda</h1>
+            <p class="slide__text">
+                <span class="slide__text-bold">Brayan Cepeda</span> is a software Engineer who is currently working at
+                <span class="slide__text-bold">LEANWARE</span>.
+                <span class="slide__text-bold"> as a Ssr. fullstack web developer</span>
+            </p>
         </div>
     </section>
 </body>
 <script type="text/javascript" src="js/functions.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
 </html>
