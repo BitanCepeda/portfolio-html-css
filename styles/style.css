@@ -13,16 +13,28 @@ body {
   background-color: black;
 }
 
+.slides {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* background-color: yellow; */
-}
-
-.photo-container {
-  /* background-color: blue; */
 }
 
 .label-loading {
@@ -34,8 +46,8 @@ body {
   display: inline-block;
   width: 30vw;
   height: 30vw;
-  background: url("../resources/img/photo.jpg");
-  background-position: 50% 50%;
+  background: url("../resources/img/brayan.jpg");
+  background-position: 0% 0%;
   background-size: cover;
   border-radius: 50%;
 }
@@ -49,7 +61,6 @@ body {
   white-space: nowrap;
   border-right: 4px solid;
   width: 19ch;
-
   animation: typing 4s steps(19), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
@@ -73,40 +84,18 @@ figure {
   margin: 0;
   height: 100%;
   width: 100%;
-  filter: grayscale(0.8);
   border-radius: 50%;
-}
-
-figure::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-figure:hover {
-  animation: bloom ease-in-out 0.75s forwards;
-}
-
-figure:hover::before {
-  animation: circle 2s;
+  animation: bloom 20s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes bloom {
   0% {
-    filter: grayscale(0.8);
+    filter: grayscale(1);
   }
 
   40% {
-    filter: grayscale(0.5);
+    filter: grayscale(0.4);
   }
 
   100% {
@@ -116,7 +105,7 @@ figure:hover::before {
 
 @keyframes circle {
   0% {
-    opacity: 0.5;
+    opacity: 0;
     background: rgba(213, 156, 34, 0.2);
   }
 
@@ -126,9 +115,7 @@ figure:hover::before {
   }
 
   100% {
-    width: 200%;
-    height: 200%;
-    opacity: 0;
+    opacity: 1.5;
   }
 }
 
@@ -201,9 +188,34 @@ header a:hover {
   color: white;
 }
 
-.progress-bar__text {
+.start {
+  background-color: transparent;
+  border: none;
+  animation: breathe 3.5s infinite forwards;
+}
+
+.start .progress-bar__text {
   display: none;
   font-weight: 400;
   color: black;
-  font-size: 1.8vw;
+  font-size: 1.5rem;
+}
+
+.start .progress-bar__text:hover {
+  cursor: pointer;
+  color: rgba(190, 236, 239, 0.943);
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
