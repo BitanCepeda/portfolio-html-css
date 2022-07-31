@@ -72,23 +72,18 @@ figure {
   margin: 0;
   height: 100%;
   width: 100%;
-  filter: grayscale(0.8);
   border-radius: 50%;
-  animation: bloom 14s;
+  animation: bloom 20s;
   animation-fill-mode: forwards;
-}
-
-figure:hover::before {
-  animation: circle 2s;
 }
 
 @keyframes bloom {
   0% {
-    filter: grayscale(0.8);
+    filter: grayscale(1);
   }
 
   40% {
-    filter: grayscale(0.5);
+    filter: grayscale(0.4);
   }
 
   100% {
@@ -98,7 +93,7 @@ figure:hover::before {
 
 @keyframes circle {
   0% {
-    opacity: 0.5;
+    opacity: 0;
     background: rgba(213, 156, 34, 0.2);
   }
 
@@ -108,9 +103,7 @@ figure:hover::before {
   }
 
   100% {
-    width: 200%;
-    height: 200%;
-    opacity: 0;
+    opacity: 1.5;
   }
 }
 
