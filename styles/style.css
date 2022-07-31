@@ -34,8 +34,8 @@ body {
   display: inline-block;
   width: 30vw;
   height: 30vw;
-  background: url("../resources/img/photo.jpg");
-  background-position: 50% 50%;
+  background: url("../resources/img/brayan.jpg");
+  background-position: 0% 0%;
   background-size: cover;
   border-radius: 50%;
 }
@@ -49,7 +49,6 @@ body {
   white-space: nowrap;
   border-right: 4px solid;
   width: 19ch;
-
   animation: typing 4s steps(19), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
@@ -75,25 +74,8 @@ figure {
   width: 100%;
   filter: grayscale(0.8);
   border-radius: 50%;
-}
-
-figure::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-figure:hover {
-  animation: bloom ease-in-out 0.75s forwards;
+  animation: bloom 14s;
+  animation-fill-mode: forwards;
 }
 
 figure:hover::before {
